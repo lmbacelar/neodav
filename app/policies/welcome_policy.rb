@@ -1,6 +1,6 @@
 class WelcomePolicy < ApplicationPolicy
   def home?
-    admin? || manager? || auditor? || regular?
+    true
   end
 
   def index?
