@@ -1,0 +1,12 @@
+header.content_title
+  h2 Log In
+
+section.content
+  = simple_form_for resource, as: resource_name, url: session_path(resource_name), html: { class: :highlight } do |f|
+    fieldset
+      = f.input :email, required: false, autofocus: true
+      = f.input :password, required: false
+      = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+    section.actions  
+      = f.button :submit, 'Log in', class: :primary
+      == render 'devise/shared/links'

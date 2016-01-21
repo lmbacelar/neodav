@@ -1,0 +1,10 @@
+section.search_form
+  = form_tag resources_path, method: :get do
+    div.search_field_button
+      = text_field_tag  :query, query, autofocus: true, placeholder: "Search for a #{resource_name} ..."
+      span
+        = submit_tag 'Go!', name: nil
+  section.search_actions
+    - if policy(resource_class).new?
+      span Or
+      = link_to 'Add New', new_resource_path, class: :primary

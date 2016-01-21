@@ -1,0 +1,9 @@
+section.search_results
+  - if resources.empty?
+    p= "No #{resources_name} found."
+  - else
+    p
+      span Export:
+      = link_to 'CSV', resources_path(params.merge(format: :csv))
+    == render resources
+    = paginate resources

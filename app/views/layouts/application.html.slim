@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title neoDAV
+    = stylesheet_link_tag     'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag  'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    nav.navigation
+      == render partial: 'shared/navbar'
+    .container
+      section.messages
+        == render partial: 'shared/flash_messages', flash: flash
+      section.main
+        == yield

@@ -1,0 +1,58 @@
+@import 'bootstrap'
+
+.navigation
+  @extend .navbar
+  @extend .navbar-default
+
+.messages
+  @extend .row
+
+section.main
+  @extend .row
+
+  header.content_title
+    @extend .row
+
+  section.sidebar
+    @extend .col-md-3
+
+  section.content
+    @extend .col-md-9
+
+    form.highlight
+      background: #f8f8ff
+
+      fieldset
+        padding: 30px 30px 10px
+        border-top: 1px solid #ccc
+        border-bottom: 1px solid #ccc
+
+    section.details
+      background: #f8f8ff
+      padding: 10px 30px
+      border-top: 1px solid #ccc
+      border-bottom: 1px solid #ccc
+
+    section.actions
+      padding: 5px 30px
+      background: #ffffff
+      border-top: 1px solid #ccc
+      
+      input[type='submit'], a
+        @extend .btn
+        margin: 10px 10px 0px 0px
+
+      input[type='submit'].primary, a.primary
+        @extend .btn-primary
+
+      input[type='submit'].default, a.default
+        @extend .btn-default
+
+      input[type='submit'].info, a.info
+        @extend .btn-info
+
+      input[type='submit'].danger, a.danger
+        @extend .btn-danger
+
+    section.search_actions
+      padding: 30px 10px

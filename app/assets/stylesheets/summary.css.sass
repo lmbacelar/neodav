@@ -1,0 +1,39 @@
+@import 'bootstrap'
+
+section.summary
+  @extend .row
+  margin: 0px
+
+  border-bottom: 1px solid #ccc
+
+  section.summary-details
+    @extend .col-md-9
+
+  section.summary-thumb
+    @extend .col-md-2
+
+  section.summary-details-thumb
+    @extend .col-md-7
+
+  section.summary-actions
+    @extend .col-md-3
+
+    a
+      @extend .btn
+      @extend .btn-xs
+      margin: 2px 2px 0px 0px
+
+    a.primary
+      @extend .btn-primary
+
+    a.default
+      @extend .btn-default
+
+    a.info
+      @extend .btn-info
+
+    a.danger
+      @extend .btn-danger
+
+section.summary:nth-child(odd)
+  background: #f8f8ff

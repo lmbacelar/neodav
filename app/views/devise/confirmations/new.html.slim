@@ -1,0 +1,14 @@
+header.content_title
+  h2 Resend confirmation instructions
+
+section.content
+  = simple_form_for resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post, class: :highlight } do |f|
+    = f.error_notification
+    = f.full_error :confirmation_token
+
+    fieldset
+      = f.input :email, required: true, autofocus: true
+
+    section.actions
+      = f.button :submit, 'Resend confirmation instructions', class: :default
+      == render 'devise/shared/links'
