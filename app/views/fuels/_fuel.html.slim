@@ -1,0 +1,9 @@
+- present fuel do |f|
+  section.summary
+    header.reference
+      h3= f.name
+    section.summary-details
+      p= f.details
+    section.summary-actions
+      = f.edit_link
+      = f.destroy_link

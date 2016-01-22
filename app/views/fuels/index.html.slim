@@ -1,0 +1,9 @@
+header.content_title
+  h1 Fuels
+
+section.content
+  == render partial: 'shared/search_form',    locals: { query: @query }
+  == render partial: 'shared/search_results', locals: { resources: @paged_fuels }
+  == render partial: 'import_form'
+
+section.sidebar
