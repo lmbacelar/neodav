@@ -1,0 +1,9 @@
+- present vehicle_type do |v|
+  section.summary
+    header.reference
+      h3= v.name
+    section.summary-details
+      p= v.details
+    section.summary-actions
+      = v.edit_link
+      = v.destroy_link

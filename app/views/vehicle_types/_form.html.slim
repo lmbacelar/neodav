@@ -1,0 +1,13 @@
+section.content
+  = simple_form_for @vehicle_type, html: { class: :highlight } do |f|
+      = f.error_notification
+      = f.error :base
+
+      fieldset
+        section.primary_details
+          = f.input :name
+          = f.input :description
+
+      section.actions
+        = f.button :submit, data: { disable_with: 'Submitting...' }, class: :primary
+        = link_to 'Back to vehicle type list', vehicle_types_path, class: :default
