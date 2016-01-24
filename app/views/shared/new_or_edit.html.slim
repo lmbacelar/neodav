@@ -1,4 +1,4 @@
 header.content_title
-  h1= "#{action_name} #{resource_name.humanize}"
+  h1= t "actions.#{action_name.downcase}_resource", resource: resource_human
 
 == render 'form'

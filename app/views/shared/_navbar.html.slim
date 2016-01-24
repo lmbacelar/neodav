@@ -10,15 +10,17 @@
     ul.nav.navbar-nav
       li.dropdown
         a.dropdown-toggle href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'
-          | Tables
+          = t '.maintenance'
           span.caret
         ul.dropdown-menu
-          li= link_to 'Fuels', fuels_path if policy(Fuel).index?
-          li= link_to 'Vehicle Types', vehicle_types_path if policy(VehicleType).index?
+          li= link_to Fuel.model_name.human(count: 2), fuels_path if policy(Fuel).index?
+          li= link_to VehicleType.model_name.human(count: 2), vehicle_types_path if policy(VehicleType).index?
     ul.nav.navbar-nav.navbar-right
+      li= link_to 'EN', locale: :en
+      li= link_to 'PT', locale: :pt
       - if user_signed_in?
         li= link_to current_user.email, edit_user_registration_path(current_user)
-        li= link_to 'Logout', destroy_user_session_path, method: :delete
+        li= link_to t('.logout'), destroy_user_session_path, method: :delete
       - else
-        li= link_to 'Sign Up', new_user_registration_path
-        li= link_to 'Login', new_user_session_path
+        li= link_to t('.signup'), new_user_registration_path
+        li= link_to t('.login'), new_user_session_path

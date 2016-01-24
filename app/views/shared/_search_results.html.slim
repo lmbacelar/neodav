@@ -1,9 +1,9 @@
 section.search_results
   - if resources.empty?
-    p= "No #{resources_name} found."
+    p= t '.results', resource: resource_human.downcase
   - else
     p
-      span Export:
+      span= t '.export'
       = link_to 'CSV', resources_path(params.merge(format: :csv))
     == render resources
     = paginate resources
