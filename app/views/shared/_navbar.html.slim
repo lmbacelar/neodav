@@ -16,8 +16,10 @@
           li= link_to Fuel.model_name.human(count: 2), fuels_path if policy(Fuel).index?
           li= link_to VehicleType.model_name.human(count: 2), vehicle_types_path if policy(VehicleType).index?
     ul.nav.navbar-nav.navbar-right
-      li= link_to 'EN', locale: :en
-      li= link_to 'PT', locale: :pt
+      - if I18n.locale == :pt
+        li= link_to 'EN', locale: :en
+      - else
+        li= link_to 'PT', locale: :pt
       - if user_signed_in?
         li= link_to current_user.email, edit_user_registration_path(current_user)
         li= link_to t('.logout'), destroy_user_session_path, method: :delete
