@@ -1,5 +1,5 @@
 header.content_title
-  h2 Forgot your password?
+  h2= t 'devise.forgot_password'
 
 section.content
   = simple_form_for resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: :highlight } do |f|
@@ -9,5 +9,5 @@ section.content
       = f.input :email, required: true, autofocus: true
 
     section.actions
-      = f.button :submit, 'Send me reset password instructions', class: :default
+      = f.button :submit, t('devise.send_password_reset_instructions'), class: :default
       == render 'devise/shared/links'

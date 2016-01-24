@@ -1,5 +1,5 @@
 header.content_title
-  h2 Log In
+  h2= t 'devise.login'
 
 section.content
   = simple_form_for resource, as: resource_name, url: session_path(resource_name), html: { class: :highlight } do |f|
@@ -8,5 +8,5 @@ section.content
       = f.input :password, required: false
       = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
     section.actions  
-      = f.button :submit, 'Log in', class: :primary
+      = f.button :submit, t('devise.login'), class: :primary
       == render 'devise/shared/links'

@@ -10,5 +10,5 @@ section.content
       = f.input :email, required: true, autofocus: true
 
     section.actions
-      = f.button :submit, 'Resend confirmation instructions', class: :default
+      = f.button :submit, t('devise.resend_confirmation_instructions'), class: :default
       == render 'devise/shared/links'
