@@ -6,9 +6,9 @@ section.content
     h3= @vehicle_type.description
   section.actions
     -if policy(@vehicle_type).edit?
-      = link_to 'Edit', edit_vehicle_type_path(@vehicle_type), class: :primary
+      = link_to t('actions.edit'), edit_vehicle_type_path(@vehicle_type), class: :primary
     - if policy(@vehicle_type).destroy?
-      = link_to 'Destroy', @vehicle_type, method: :delete,
-                                          data: { confirm: 'Are you sure?' },
-                                                  class: :danger
-    = link_to 'Back to vehicle type list', vehicle_types_path, class: :default
+      = link_to t('actions.destroy'), @vehicle_type, method: :delete,
+                                      data: { confirm: t('actions.are_you_sure') },
+                                      class: :danger
+    = link_to t('actions.back_to_resources_list', resources: resources_human), vehicle_types_path, class: :default

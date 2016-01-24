@@ -10,4 +10,4 @@ section.content
 
       section.actions
         = f.button :submit, data: { disable_with: 'Submitting...' }, class: :primary
-        = link_to 'Back to vehicle type list', vehicle_types_path, class: :default
+        = link_to t('actions.back_to_resources_list', resources: resources_human), vehicle_types_path, class: :default
