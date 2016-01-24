@@ -36,6 +36,14 @@ module ApplicationHelper
     resource_name.classify.constantize
   end
 
+  def resource_human
+    resource_class.model_name.human
+  end
+
+  def resources_human
+    resource_class.model_name.human count: 2
+  end
+
   def action_name
     params[:action].capitalize
   end
