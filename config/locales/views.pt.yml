@@ -23,7 +23,7 @@ pt:
 
   welcome:
     home:
-      title: 'Bem-vindos ao neoDAV !!!'
+      title: 'Bem-vindo ao neoDAV !!!'
 
   password:
     min_length: '%{num_chars} caracteres no mínimo'
