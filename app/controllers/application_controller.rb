@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+  before_action :set_locale
   before_action :authenticate_user!, unless: :devise_controller?
 
   include Pundit
@@ -8,6 +9,10 @@ class ApplicationController < ActionController::Base
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   private
+    def set_locale
+      I18n.locale = params[:locale] if params[:locale].present?
+    end
+
     def export_filename
       "#{params[:controller]}_#{Time.zone.now.strftime('%Y%m%d_%H%M%S')}.#{params[:format]}"
     end
