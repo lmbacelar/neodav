@@ -1,16 +1,18 @@
 Rails.application.routes.draw do
-  resources :vehicle_types do
-    collection do
-      post :import
+  scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
+    resources :vehicle_types do
+      collection do
+        post :import
+      end
     end
-  end
 
-  resources :fuels do
-    collection do
-      post :import
+    resources :fuels do
+      collection do
+        post :import
+      end
     end
-  end
 
-  devise_for :users
-  root to: 'welcome#home'
+    devise_for :users
+    root to: 'welcome#home'
+  end
 end

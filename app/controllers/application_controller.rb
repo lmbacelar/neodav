@@ -13,6 +13,10 @@ class ApplicationController < ActionController::Base
       I18n.locale = params[:locale] if params[:locale].present?
     end
 
+    def default_url_options options = {}
+        { locale: I18n.locale }
+    end
+
     def export_filename
       "#{params[:controller]}_#{Time.zone.now.strftime('%Y%m%d_%H%M%S')}.#{params[:format]}"
     end
