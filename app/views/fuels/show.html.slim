@@ -6,9 +6,9 @@ section.content
     h3= @fuel.description
   section.actions
     -if policy(@fuel).edit?
-      = link_to 'Edit', edit_fuel_path(@fuel), class: :primary
+      = link_to t('actions.edit'), edit_fuel_path(@fuel), class: :primary
     - if policy(@fuel).destroy?
-      = link_to 'Destroy', @fuel, method: :delete,
-                                  data: { confirm: 'Are you sure?' },
-                                  class: :danger
-    = link_to 'Back to fuel list', fuels_path, class: :default
+      = link_to t('actions.destroy'), @fuel, method: :delete,
+                                      data: { confirm: t('actions.are_you_sure') },
+                                      class: :danger
+    = link_to t('actions.back_to_resources_list', resources: resources_human), fuels_path, class: :default
