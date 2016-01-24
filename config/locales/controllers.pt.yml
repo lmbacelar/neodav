@@ -1,0 +1,31 @@
+pt:
+  actions:
+    new: 'Novo'
+    create: 'Criar'
+    edit: 'Editar'
+    update: 'Atualizar'
+    delete: 'Apagar'
+    destroy: 'Destruir'
+    list: 'Listar'
+    index: 'Listar'
+    back: 'Voltar'
+    new_resource: 'Novo %{resource}'
+    create_resource: 'Criar %{resource}'
+    edit_resource: 'Editar %{resource}'
+    update_resource: 'Atualizar %{resource}'
+    delete_resource: 'Apagar %{resource}'
+    destroy_resource: 'Destruir %{resource}'
+    index_resource: 'Listar %{resource}'
+    list_resource: 'Listar %{resource}'
+    back_to_resources_list: 'Voltar à lista de %{resources}'
+    are_you_sure: 'Tem a certeza?'
+
+  notice:
+    create:
+      success: '%{resource} criado com sucesso.'
+    update:
+      success: '%{resource} atualizado com sucesso.'
+    destroy:
+      success: '%{resource} destruído com sucesso.'
+    import:
+      success: '%{resource} importados com sucesso.'

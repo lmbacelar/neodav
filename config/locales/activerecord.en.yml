@@ -1,0 +1,21 @@
+en:
+  activerecord:
+    models:
+      fuel:
+        one: 'Fuel'
+        other: 'Fuels'
+      vehicle_type:
+        one: 'Vehicle Type'
+        other: 'Vehicle Types'
+    attributes:
+      user:
+        email: 'Email'
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
+        remember_me: 'Remember me'
+      fuel:
+        name: 'Name'
+        description: 'Description'
+      vehicle_type:
+        name: 'Name'
+        description: 'Description'

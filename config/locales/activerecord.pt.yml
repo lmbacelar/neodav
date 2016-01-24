@@ -1,0 +1,24 @@
+pt:
+  activerecord:
+    models:
+      fuel:
+        one: 'Combustível'
+        other: 'Combustíveis'
+      vehicle_type:
+        one: 'Tipo de Veículo'
+        other: 'Tipos de Veículo'
+    attributes:
+      user:
+        email: 'Email'
+        password: 'Password'
+        password_confirmation: 'Confirme a password'
+        remember_me: 'Lembrar-me'
+      fuel:
+        name: 'Nome'
+        description: 'Descrição'
+      vehicle_type:
+        name: 'Nome'
+        description: 'Descrição'
+    errors:
+      messages:
+        record_invalid: 'A validação falhou: %{errors}'

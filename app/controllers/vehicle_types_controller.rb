@@ -31,7 +31,7 @@ class VehicleTypesController < ApplicationController
     authorize @vehicle_type
     respond_to do |format|
       if @vehicle_type.save
-        format.html { redirect_to @vehicle_type, notice: t('.success') }
+        format.html { redirect_to @vehicle_type, notice: t('notice.create.success', resource: VehicleType.model_name.human) }
         format.json { render :show, status: :created, location: @vehicle_type }
       else
         format.html { render 'shared/new_or_edit' }
@@ -43,7 +43,7 @@ class VehicleTypesController < ApplicationController
   def update
     respond_to do |format|
       if @vehicle_type.update(vehicle_type_params)
-        format.html { redirect_to @vehicle_type, notice: t('.success') }
+        format.html { redirect_to @vehicle_type, notice: t('notice.update.success', resource: VehicleType.model_name.human) }
         format.json { render :show, status: :ok, location: @vehicle_type }
       else
         format.html { render 'shared/new_or_edit' }
@@ -55,7 +55,7 @@ class VehicleTypesController < ApplicationController
   def destroy
     @vehicle_type.destroy
     respond_to do |format|
-      format.html { redirect_to vehicle_types_url, notice: t('.success') }
+      format.html { redirect_to vehicle_types_url, notice: t('notice.destroy.success', resource: VehicleType.model_name.human) }
       format.json { head :no_content }
     end
   end
@@ -63,7 +63,7 @@ class VehicleTypesController < ApplicationController
   def import
     authorize VehicleType
     VehicleType.from_csv params[:file]
-    redirect_to vehicle_types_url, notice: 'Vehicle types imported.'
+    redirect_to vehicle_types_url, notice: t('notice.import.success', resource: VehicleType.model_name.human(count: 2))
   end
 
   def autocomplete

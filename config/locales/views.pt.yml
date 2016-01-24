@@ -1,0 +1,31 @@
+pt:
+  shared:
+    navbar:
+      maintenance: 'Manutenção'
+      login: 'Login'
+      logout: 'Logout'
+      signup: 'Registe-se'
+    search_form:
+      placeholder: 'Procurar %{resource} ...'
+      go: 'Ir!'
+      or: 'Ou'
+      add_new: 'Adicionar Novo'
+    search_results:
+      results: 'Nenhum %{resource} encontrado.'
+      export: 'Exportar:'
+
+  import_form:
+    title: 'Importar %{resources}'
+    instructions: 'Pode utilizar um ficheiro CSV para importar registos. A primeira linha deverá indicar o nome da coluna. São permitidas as seguintes colunas:'
+    existing_key_behaviour_html: 'Se <strong>%{column}</strong> existir o %{resource} será atualizado.'
+    select_and_import: 'Selecione um ficheiro CSV compatível e Importe-o.'
+    import: 'Importar!'
+
+  welcome:
+    home:
+      title: 'Bem-vindos ao neoDAV !!!'
+
+  password:
+    min_length: '%{num_chars} caracteres no mínimo'
+    blank_for_no_change: 'deixe em branco para manter inalterado'
+    current_to_confirm: 'precisamos da password atual para confirmar as suas alterações'

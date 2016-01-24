@@ -1,0 +1,31 @@
+en:
+  shared:
+    navbar:
+      maintenance: 'Maintenance'
+      login: 'Login'
+      logout: 'Logout'
+      signup: 'Sign Up'
+    search_form:
+      placeholder: 'Search for %{resource} ...'
+      go: 'Go!'
+      or: 'Or'
+      add_new: 'Add New'
+    search_results:
+      results: 'No %{resource} found.'
+      export: 'Export:'
+
+  import_form:
+    title: 'Import %{resources}'
+    instructions: 'A CSV file can be used to import records. The first row should be the column name. The following columns are allowed:'
+    existing_key_behaviour_html: 'For existing <strong>%{column}</strong>, %{resource} will be updated.'
+    select_and_import: 'Select a compliant CSV file and Import! it.'
+    import: 'Import!'
+
+  welcome:
+    home:
+      title: 'Welcome to neoDAV !!!'
+
+  password:
+    min_length: '%{num_chars} characters minimum'
+    blank_for_no_change: "leave it blank if you don't want to change it"
+    current_to_confirm: 'we need your current password to confirm your changes'
