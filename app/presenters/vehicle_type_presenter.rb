@@ -15,15 +15,15 @@ class VehicleTypePresenter < BasePresenter
 
   def edit_link
     if h.policy(vehicle_type).edit?
-      h.link_to 'Edit', h.edit_vehicle_type_path(vehicle_type), class: :default
+      h.link_to h.t('actions.edit'), h.edit_vehicle_type_path(vehicle_type), class: :default
     end
   end
 
   def destroy_link
     if h.policy(vehicle_type).destroy?
-      h.link_to 'Destroy', vehicle_type, method: :delete,
-                                         data: { confirm: 'Are you sure?' },
-                                         class: :danger
+      h.link_to h.t('actions.destroy'), vehicle_type, method: :delete,
+                                        data: { confirm: h.t('actions.are_you_sure') },
+                                        class: :danger
     end
   end
 end
