@@ -31,7 +31,7 @@ class FuelsController < ApplicationController
     authorize @fuel
     respond_to do |format|
       if @fuel.save
-        format.html { redirect_to @fuel, notice: 'Fuel was successfully created.' }
+        format.html { redirect_to @fuel, notice: t('.success') }
         format.json { render :show, status: :created, location: @fuel }
       else
         format.html { render 'shared/new_or_edit' }
@@ -43,7 +43,7 @@ class FuelsController < ApplicationController
   def update
     respond_to do |format|
       if @fuel.update(fuel_params)
-        format.html { redirect_to @fuel, notice: 'Fuel was successfully updated.' }
+        format.html { redirect_to @fuel, notice: t('.success') }
         format.json { render :show, status: :ok, location: @fuel }
       else
         format.html { render 'shared/new_or_edit' }
@@ -55,7 +55,7 @@ class FuelsController < ApplicationController
   def destroy
     @fuel.destroy
     respond_to do |format|
-      format.html { redirect_to fuels_url, notice: 'Fuel was successfully destroyed.' }
+      format.html { redirect_to fuels_url, notice: t('.success') }
       format.json { head :no_content }
     end
   end

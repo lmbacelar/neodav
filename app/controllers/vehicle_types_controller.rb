@@ -31,7 +31,7 @@ class VehicleTypesController < ApplicationController
     authorize @vehicle_type
     respond_to do |format|
       if @vehicle_type.save
-        format.html { redirect_to @vehicle_type, notice: 'Vehicle type was successfully created.' }
+        format.html { redirect_to @vehicle_type, notice: t('.success') }
         format.json { render :show, status: :created, location: @vehicle_type }
       else
         format.html { render 'shared/new_or_edit' }
@@ -43,7 +43,7 @@ class VehicleTypesController < ApplicationController
   def update
     respond_to do |format|
       if @vehicle_type.update(vehicle_type_params)
-        format.html { redirect_to @vehicle_type, notice: 'Vehicle type was successfully updated.' }
+        format.html { redirect_to @vehicle_type, notice: t('.success') }
         format.json { render :show, status: :ok, location: @vehicle_type }
       else
         format.html { render 'shared/new_or_edit' }
@@ -55,7 +55,7 @@ class VehicleTypesController < ApplicationController
   def destroy
     @vehicle_type.destroy
     respond_to do |format|
-      format.html { redirect_to vehicle_types_url, notice: 'Vehicle type was successfully destroyed.' }
+      format.html { redirect_to vehicle_types_url, notice: t('.success') }
       format.json { head :no_content }
     end
   end
