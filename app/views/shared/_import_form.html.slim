@@ -1,0 +1,16 @@
+section.import_form
+  - if policy(resource_class).import?
+    h2= t 'import_form.title', resources: resources_human
+
+    section.instructions
+    = form_tag import_fuels_path, multipart: true, class: :highlight do
+      fieldset
+        p= t 'import_form.instructions'
+        ul
+          - resource_class.io_attributes.each do |attr|
+            li= attr
+        p= t 'import_form.existing_key_behaviour_html', column: resource_class.io_attributes.first, resource: resource_human
+        p= t 'import_form.select_and_import'
+        = file_field_tag :file
+      section.actions
+        = submit_tag t('import_form.import'), class: :primary
