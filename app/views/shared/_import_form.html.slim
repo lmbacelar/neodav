@@ -3,7 +3,7 @@ section.import_form
     h2= t 'import_form.title', resources: resources_human
 
     section.instructions
-    = form_tag import_fuels_path, multipart: true, class: :highlight do
+    = form_tag import_resources_path, multipart: true, class: :highlight do
       fieldset
         p= t 'import_form.instructions'
         ul

@@ -17,11 +17,15 @@ module ApplicationHelper
   end
 
   def resources_path options={}
-    Rails.application.routes.url_helpers.send("#{resources_name}_path", options.symbolize_keys)
+    Rails.application.routes.url_helpers.send("#{resources_name}_path", options.merge(locale: I18n.locale).symbolize_keys)
   end
 
-  def new_resource_path
-    Rails.application.routes.url_helpers.send("new_#{resource_name}_path")
+  def import_resources_path options={}
+    Rails.application.routes.url_helpers.send("import_#{resources_name}_path", options.merge(locale: I18n.locale).symbolize_keys)
+  end
+
+  def new_resource_path options={}
+    Rails.application.routes.url_helpers.send("new_#{resource_name}_path", options.merge(locale: I18n.locale).symbolize_keys)
   end
 
   def resources_name
