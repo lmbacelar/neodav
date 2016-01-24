@@ -1,0 +1,81 @@
+pt:
+  devise:
+    login: 'Log In'
+    sign_up: 'Registe-se'
+    sign_in_with_provider: 'Log in com %{provider}'
+    forgot_password: 'Esqueceu a sua password?'
+    send_password_reset_instructions: 'Enviem-me instruções para redefinir a password'
+    resend_confirmation_instructions: 'Reenviar instruções de confirmação'
+    no_confirmation_instructions: 'Não recebeu as instruções para confirmação?'
+    resend_unlock_instructions: 'Reenviar instruções para desbloqueio'
+    no_unlock_instructions: 'Não recebeu as instruções para desbloqueio?'
+    waiting_confirmation_for: 'Estamos a aguardar confirmação para: %{resource}'
+    cancel_my_account: 'Cancelar a minha conta'
+    unhappy: 'Insatisfeito?'
+
+    confirmations:
+      confirmed: 'A sua conta foi confirmada com sucesso.'
+      send_instructions: 'Receberá um e-mail para confirmar a sua conta dentro de poucos minutos.'
+      send_paranoid_instructions: 'Caso o seu endereço de e-mail já exista na base de dados, receberá um email com instruções sobre como ativar a sua conta.'
+    failure:
+      already_authenticated: 'O seu login já foi efetuado.'
+      inactive: 'A sua conta ainda não foi ativada.'
+      invalid: 'Email ou password inválidos.'
+      locked: 'A sua conta está bloqueada.'
+      last_attempt: 'Possui apenas mais uma tentativa, antes da sua conta ser bloqueada.'
+      not_found_in_database: 'Email ou password inválidos.'
+      timeout: 'A sua sessão expirou, faça login novamente para continuar.'
+      unauthenticated: 'Precisa fazer login ou efetuar um novo registo para continuar.'
+      unconfirmed: 'Precisa confirmar sua conta para continuar.'
+    mailer:
+      greet: 'Bem-vindo %{resource}!'
+      confirmation_instructions:
+        subject: 'Instruções de confirmação'
+        steps: 'Pode confirmar a sua conta de email utilizando o link abaixo:'
+        link: 'Confirmar a minha conta'
+      reset_password_instructions:
+        subject: 'Instruções para redefinir sua password'
+        steps: 'Foi pedida a redefinição da sua password. Pode fazer isso utilizando o link abaixo.'
+        link: 'Alterar a minha password'
+        unsolicited: "Se não fez este pedido, por favor ignore este email."
+        warning: "A sua password não será alterada até que aceda ao link abaixo e crie uma password nova."
+      unlock_instructions:
+        subject: 'Instruções para desbloquear sua conta'
+        lock_explanation: 'A sua conta foi bloqueada devido a um número excesivvo de tentativas de login falhadas.'
+        steps: 'Clique no link abaixo para desbloquear a sua conta:'
+        link: 'Desbloquear a minha conta'
+    omniauth_callbacks:
+      failure: 'Não foi possível autenticá-lo como %{kind} por causa de "%{reason}".'
+      success: 'Autenticado com sucesso como %{kind}.'
+    passwords:
+      no_token: 'Não pode aceder a esta página para redefinir sua password. Se recebeu um e-mail para redefinir sua password, por favor, certifique-se que está a usar o URL correto.'
+      send_instructions: 'Dentro de poucos minutos receberá um e-mail com instruções para redefinir sua password.'
+      send_paranoid_instructions: 'Se o seu endereço de e-mail existir na nossa base de dados, receberá um link de recuperação da password dentro de poucos minutos.'
+      updated: 'A sua password foi alterada com sucesso. Login efetuado com sucesso.'
+      updated_not_active: 'A sua password foi alterada com sucesso.'
+    registrations:
+      destroyed: 'Até logo! A sua conta foi cancelada com sucesso. Esperamos vê-lo novamente em breve.'
+      signed_up: 'Registo concluido com sucesso. Bem-vindo!'
+      signed_up_but_inactive: 'Registo concluido com sucesso. Para efetuar login, deverá ativar sua conta.'
+      signed_up_but_locked: 'Registo concluido com sucesso. No entanto, não podemos efetuar o seu login, porque a sua conta está bloqueada.'
+      signed_up_but_unconfirmed: 'Uma mensagem com um link de confirmação foi enviada para o seu endereço de e-mail. Por favor, verifique-o, para ativar sua conta.'
+      update_needs_confirmation: 'Atualizou a sua conta com sucesso, mas precisamos confirmar o seu novo endereço de e-mail. Por favor, consulte o seu e-mail e clique no link de confirmação do seu novo endereço de e-mail.'
+      updated: 'A sua conta foi atualizada com sucesso.'
+    sessions:
+      signed_in: 'Login efetuado com sucesso.'
+      signed_out: 'Logout efetuado com sucesso.'
+      already_signed_out: 'Logout efetuado com sucesso.'
+    unlocks:
+      send_instructions: 'Dentro de poucos minutos receberá um e-mail com instruções sobre como desbloquear a sua conta.'
+      send_paranoid_instructions: 'Se a sua conta existir, receberá, dentro de poucos minutos, um e-mail com instruções sobre como desbloqueá-la.'
+      unlocked: 'A sua conta foi desbloqueada com sucesso. Faça login para continuar.'
+  errors:
+    messages:
+      already_confirmed: 'já foi confirmado, por favor, efetue o login'
+      confirmation_period_expired: 'deve ser confirmada dentro de %{period}, por favor solicite uma nova'
+      expired: 'expirado, por favor solicite uma nova'
+      not_found: 'não encontrado'
+      not_locked: 'não encontra-se bloqueada'
+      not_saved:
+        one: '1 erro impediu a gravação de %{resource} :'
+        other: '%{count} erros impediram a gravação de %{resource} :'
