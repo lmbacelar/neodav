@@ -6,6 +6,12 @@ Rails.application.routes.draw do
       end
     end
 
+    resources :brands do
+      collection do
+        post :import
+      end
+    end
+
     resources :fuels do
       collection do
         post :import
