@@ -14,10 +14,10 @@ pt:
         password_confirmation: 'Confirme a password'
         remember_me: 'Lembrar-me'
       fuel:
-        name: 'Nome'
+        code: 'Código'
         description: 'Descrição'
       vehicle_type:
-        name: 'Nome'
+        code: 'Código'
         description: 'Descrição'
     errors:
       messages:
