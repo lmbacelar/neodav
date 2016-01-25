@@ -4,6 +4,9 @@ en:
       fuel:
         one: 'Fuel'
         other: 'Fuels'
+      brand:
+        one: 'Brand'
+        other: 'Brands'
       vehicle_type:
         one: 'Vehicle Type'
         other: 'Vehicle Types'
@@ -14,6 +17,9 @@ en:
         password_confirmation: 'Password confirmation'
         remember_me: 'Remember me'
       fuel:
+        code: 'Code'
+        description: 'Description'
+      brand:
         code: 'Code'
         description: 'Description'
       vehicle_type:

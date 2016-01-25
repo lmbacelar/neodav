@@ -4,6 +4,9 @@ pt:
       fuel:
         one: 'Combustível'
         other: 'Combustíveis'
+      brand:
+        one: 'Marca'
+        other: 'Marcas'
       vehicle_type:
         one: 'Tipo de Veículo'
         other: 'Tipos de Veículo'
@@ -14,6 +17,9 @@ pt:
         password_confirmation: 'Confirme a password'
         remember_me: 'Lembrar-me'
       fuel:
+        code: 'Código'
+        description: 'Descrição'
+      brand:
         code: 'Código'
         description: 'Descrição'
       vehicle_type:
