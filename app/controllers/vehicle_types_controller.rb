@@ -67,9 +67,9 @@ class VehicleTypesController < ApplicationController
   end
 
   def autocomplete
-    vehicle_types = VehicleType.where("name ilike '#{params[:term]}%'").order(:name)
+    vehicle_types = VehicleType.where("description ilike '#{params[:term]}%'").order(:description)
     authorize vehicle_types
-    render json: vehicle_types.pluck(:name)
+    render json: vehicle_types.pluck(:description)
   end
 
   private
@@ -79,6 +79,6 @@ class VehicleTypesController < ApplicationController
     end
 
     def vehicle_type_params
-      params.require(:vehicle_type).permit(:name, :description)
+      params.require(:vehicle_type).permit(:code, :description)
     end
 end
