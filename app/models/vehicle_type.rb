@@ -2,6 +2,8 @@ class VehicleType < ActiveRecord::Base
   validates :code,        presence: true, uniqueness: true
   validates :description, presence: true, uniqueness: true
 
+  default_scope { order :description }
+
   include Serializable
   io_attributes :code, :description
 
