@@ -62,8 +62,12 @@ class FuelsController < ApplicationController
 
   def import
     authorize Fuel
-    Fuel.from_csv params[:file]
-    redirect_to fuels_url, notice: t('notice.import.success', resource: Fuel.model_name.human(count: 2))
+    if params[:file]
+      Fuel.from_csv params[:file]
+      redirect_to fuels_url, notice: t('notice.import.success', resource: Fuel.model_name.human(count: 2))
+    else
+      redirect_to fuels_url, alert: t('alert.import.failure', resource: Fuel.model_name.human(count: 2))
+    end
   end
 
   def autocomplete

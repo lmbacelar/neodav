@@ -29,3 +29,6 @@ pt:
       success: '%{resource} destruído com sucesso.'
     import:
       success: '%{resource} importados com sucesso.'
+  alert:
+    import:
+      failure: 'Importação de %{resource} falhou. Confirme se o ficheiro existe e se é compatível.'

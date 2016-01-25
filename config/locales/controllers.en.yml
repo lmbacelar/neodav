@@ -29,3 +29,6 @@ en:
       success: '%{resource} was successfully destroyed.'
     import:
       success: '%{resource} were successfully imported.'
+  alert:
+    import:
+      failure: 'Failed to import %{resource}. Check if file is present and compliant.'

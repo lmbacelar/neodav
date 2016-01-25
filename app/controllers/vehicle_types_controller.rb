@@ -62,8 +62,12 @@ class VehicleTypesController < ApplicationController
 
   def import
     authorize VehicleType
-    VehicleType.from_csv params[:file]
-    redirect_to vehicle_types_url, notice: t('notice.import.success', resource: VehicleType.model_name.human(count: 2))
+    if params[:file]
+      VehicleType.from_csv params[:file]
+      redirect_to vehicle_types_url, notice: t('notice.import.success', resource: VehicleType.model_name.human(count: 2))
+    else
+      redirect_to fuels_url, alert: t('alert.import.failure', resource: VehicleType.model_name.human(count: 2))
+    end
   end
 
   def autocomplete
