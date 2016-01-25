@@ -67,9 +67,9 @@ class FuelsController < ApplicationController
   end
 
   def autocomplete
-    fuels = Fuel.where("name ilike '#{params[:term]}%'").order(:name)
+    fuels = Fuel.where("description ilike '#{params[:term]}%'").order(:description)
     authorize fuels
-    render json: fuels.pluck(:name)
+    render json: fuels.pluck(:description)
   end
 
   private
@@ -79,6 +79,6 @@ class FuelsController < ApplicationController
     end
 
     def fuel_params
-      params.require(:fuel).permit(:name, :description)
+      params.require(:fuel).permit(:code, :description)
     end
 end
