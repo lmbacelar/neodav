@@ -1,16 +1,16 @@
 class VehicleTypePresenter < BasePresenter
   presents :vehicle_type
 
-  def code
+  def description
     if h.policy(vehicle_type).show?
-      h.link_to vehicle_type.code, vehicle_type
+      h.link_to vehicle_type.description, vehicle_type
     else
-      vehicle_type.code
+      vehicle_type.description
     end
   end
 
   def details
-    vehicle_type.description
+    "cod. #{vehicle_type.code}"
   end
 
   def edit_link
