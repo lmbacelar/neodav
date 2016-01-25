@@ -1,5 +1,6 @@
 class VehicleType < ActiveRecord::Base
-  validates :code, presence: true, uniqueness: true
+  validates :code,        presence: true, uniqueness: true
+  validates :description, presence: true, uniqueness: true
 
   include Serializable
   io_attributes :code, :description
