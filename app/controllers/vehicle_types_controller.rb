@@ -66,7 +66,7 @@ class VehicleTypesController < ApplicationController
       VehicleType.from_csv params[:file]
       redirect_to vehicle_types_url, notice: t('notice.import.success', resource: VehicleType.model_name.human(count: 2))
     else
-      redirect_to fuels_url, alert: t('alert.import.failure', resource: VehicleType.model_name.human(count: 2))
+      redirect_to vehicle_types_url, alert: t('alert.import.failure', resource: VehicleType.model_name.human(count: 2))
     end
   end
 
