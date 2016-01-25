@@ -5,9 +5,9 @@ section.content
 
       fieldset
         section.primary_details
-          = f.input :code
+          = f.input :code, autofocus: true
           = f.input :description
 
       section.actions
-        = f.button :submit, data: { disable_with: 'Submitting...' }, class: :primary
+        = f.button :submit, data: { disable_with: t('simple_form.submitting') }, class: :primary
         = link_to t('actions.back_to_resources_list', resources: resources_human), vehicle_types_path, class: :default
