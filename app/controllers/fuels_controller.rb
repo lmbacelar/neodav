@@ -31,7 +31,7 @@ class FuelsController < ApplicationController
     authorize @fuel
     respond_to do |format|
       if @fuel.save
-        format.html { redirect_to @fuel, notice: t('notice.create.success', resource: Fuel.model_name.human) }
+        format.html { redirect_to fuels_url, notice: t('notice.create.success', resource: Fuel.model_name.human) }
         format.json { render :show, status: :created, location: @fuel }
       else
         format.html { render 'shared/new_or_edit' }
@@ -43,7 +43,7 @@ class FuelsController < ApplicationController
   def update
     respond_to do |format|
       if @fuel.update(fuel_params)
-        format.html { redirect_to @fuel, notice: t('notice.update.success', resource: Fuel.model_name.human) }
+        format.html { redirect_to fuels_url, notice: t('notice.update.success', resource: Fuel.model_name.human) }
         format.json { render :show, status: :ok, location: @fuel }
       else
         format.html { render 'shared/new_or_edit' }

@@ -31,7 +31,7 @@ class VehicleTypesController < ApplicationController
     authorize @vehicle_type
     respond_to do |format|
       if @vehicle_type.save
-        format.html { redirect_to @vehicle_type, notice: t('notice.create.success', resource: VehicleType.model_name.human) }
+        format.html { redirect_to vehicle_types_url, notice: t('notice.create.success', resource: VehicleType.model_name.human) }
         format.json { render :show, status: :created, location: @vehicle_type }
       else
         format.html { render 'shared/new_or_edit' }
@@ -43,7 +43,7 @@ class VehicleTypesController < ApplicationController
   def update
     respond_to do |format|
       if @vehicle_type.update(vehicle_type_params)
-        format.html { redirect_to @vehicle_type, notice: t('notice.update.success', resource: VehicleType.model_name.human) }
+        format.html { redirect_to vehicle_types_url, notice: t('notice.update.success', resource: VehicleType.model_name.human) }
         format.json { render :show, status: :ok, location: @vehicle_type }
       else
         format.html { render 'shared/new_or_edit' }
