@@ -8,6 +8,7 @@ class CreateVehicleTypes < ActiveRecord::Migration
       t.timestamps           null: false
 
       t.index  :code,        unique: true
+      t.index  :description, unique: true
       t.index  :slug,        unique: true
     end
   end
