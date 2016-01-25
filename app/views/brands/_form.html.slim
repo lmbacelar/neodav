@@ -1,0 +1,13 @@
+section.content
+  = simple_form_for @brand, html: { class: :highlight } do |f|
+      = f.error_notification
+      = f.error :base
+
+      fieldset
+        section.primary_details
+          = f.input :code, autofocus: true
+          = f.input :description
+
+      section.actions
+        = f.button :submit, data: { disable_with: t('simple_form.submitting') }, class: :primary
+        = link_to t('actions.back_to_resources_list', resources: resources_human), brands_path, class: :default
