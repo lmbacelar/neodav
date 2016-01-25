@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160122012752) do
+ActiveRecord::Schema.define(version: 20160125234019) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "brands", force: :cascade do |t|
+    t.string   "code",        default: "", null: false
+    t.string   "description", default: "", null: false
+    t.string   "slug",                     null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "brands", ["code"], name: "index_brands_on_code", unique: true, using: :btree
+  add_index "brands", ["description"], name: "index_brands_on_description", unique: true, using: :btree
+  add_index "brands", ["slug"], name: "index_brands_on_slug", unique: true, using: :btree
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
