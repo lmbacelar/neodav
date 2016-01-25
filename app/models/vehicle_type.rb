@@ -1,21 +1,21 @@
 class VehicleType < ActiveRecord::Base
-  validates :name, presence: true, uniqueness: true
+  validates :code, presence: true, uniqueness: true
 
   include Serializable
-  io_attributes :name, :description
+  io_attributes :code, :description
 
   extend FriendlyId
-  friendly_id :name, use: :slugged
+  friendly_id :code, use: :slugged
 
   def self.search query
     if query.present?
-      where "name ilike '%#{query}%' OR description ilike '%#{query}%'"
+      where "code = '#{query}' OR description ilike '%#{query}%'"
     else
       all
     end
   end
 
   def to_s
-    name
+    code
   end
 end
