@@ -14,7 +14,7 @@ en:
         password_confirmation: 'Password confirmation'
         remember_me: 'Remember me'
       fuel:
-        name: 'Name'
+        code: 'Code'
         description: 'Description'
       vehicle_type:
         name: 'Name'

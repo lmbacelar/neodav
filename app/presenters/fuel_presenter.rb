@@ -1,11 +1,11 @@
 class FuelPresenter < BasePresenter
   presents :fuel
 
-  def name
+  def code
     if h.policy(fuel).show?
-      h.link_to fuel.name, fuel
+      h.link_to fuel.code, fuel
     else
-      fuel.name
+      fuel.code
     end
   end
 
