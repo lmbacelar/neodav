@@ -19,6 +19,9 @@ gem 'pg_search', '~> 1.0', '>= 1.0.5'
 gem 'devise', '~> 3.5', '>= 3.5.2'
 gem 'pundit', '~> 1.0', '>= 1.0.1'
 
+gem 'rails_12factor', '~> 0.0.3'
+gem 'puma', '~> 2.15', '>= 2.15.3'
+
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.0'
